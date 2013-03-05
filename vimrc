@@ -24,6 +24,8 @@ set bs=indent,eol,start
 set showcmd
 set shiftround
 set switchbuf=usetab
+set laststatus=2
+set encoding=utf-8
 
 call pathogen#infect()
 
