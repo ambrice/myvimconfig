@@ -1,0 +1,15 @@
+[submodule "bundle/vim-fugitive"]
+	path = bundle/vim-fugitive
+	url = git://github.com/tpope/vim-fugitive.git
+[submodule "bundle/vim-gitgutter"]
+	path = bundle/vim-gitgutter
+	url = git://github.com/airblade/vim-gitgutter.git
+[submodule "bundle/vim-protobuf"]
+	path = bundle/vim-protobuf
+	url = git://github.com/jboyens/vim-protobuf.git
+[submodule "bundle/vim-qml"]
+	path = bundle/vim-qml
+	url = git://github.com/peterhoeg/vim-qml.git
+[submodule "bundle/vim-sleuth"]
+	path = bundle/vim-sleuth
+	url = git://github.com/tpope/vim-sleuth.git
