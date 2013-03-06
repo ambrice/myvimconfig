@@ -49,7 +49,7 @@ nnoremap <leader>l <C-W>l
 noremap <SPACE> :bnext!<CR>
 noremap <S-SPACE> :bprev!<CR>
 
-colorscheme torte
+colorscheme zenburn
 
 " Project plugin stuff
 au BufWinLeave .vimprojects mkview

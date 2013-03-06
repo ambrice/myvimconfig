@@ -13,3 +13,6 @@
 [submodule "bundle/vim-sleuth"]
 	path = bundle/vim-sleuth
 	url = git://github.com/tpope/vim-sleuth.git
+[submodule "bundle/Zenburn"]
+	path = bundle/Zenburn
+	url = git://github.com/jnurmine/Zenburn.git
