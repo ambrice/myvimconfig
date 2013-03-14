@@ -27,6 +27,8 @@ set switchbuf=usetab
 set laststatus=2
 set encoding=utf-8
 
+set rtp+=~/.local/lib/python2.7/site-packages/powerline/bindings/vim
+
 call pathogen#infect()
 
 let mapleader=","
@@ -74,4 +76,7 @@ augroup filetype
 augroup end
 
 nnoremap <leader>o :ClassOpen<CR>
+
+let g:syntastic_cpp_compiler_options = ' -std=c++11'
+let g:syntastic_mode_map = { 'passive_filetypes': ['cpp', 'java'] }
 
