@@ -27,7 +27,7 @@ set switchbuf=usetab
 set laststatus=2
 set encoding=utf-8
 
-set rtp+=~/.local/lib/python2.7/site-packages/powerline/bindings/vim
+runtime vimrc.local
 
 call pathogen#infect()
 
@@ -80,3 +80,8 @@ nnoremap <leader>o :ClassOpen<CR>
 let g:syntastic_cpp_compiler_options = ' -std=c++11'
 let g:syntastic_mode_map = { 'passive_filetypes': ['cpp', 'java'] }
 
+let g:slimv_lisp='/usr/bin/mit-scheme'
+let g:slimv_impl='mit'
+let g:scheme_builtin_swank=1
+
+let g:gitgutter_enabled=0
