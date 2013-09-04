@@ -8,7 +8,7 @@ function! s:ClassOpen(...)
     let class = a:0 > 0 ? a:1 : input("Class name: ")
     let origsua = &suffixesadd
     set suffixesadd=.h,.hpp,.hh,.hxx
-    let f = findfile(class, "**3")
+    let f = findfile(class, "**3;../**3")
     if empty(f)
         echo "File" class "not found "
         let &suffixesadd = origsua
@@ -20,7 +20,7 @@ function! s:ClassOpen(...)
         execute "tabnew" f
     endif
     set suffixesadd=.cpp,.cc,.c,.cxx
-    let f = findfile(class, "**3")
+    let f = findfile(class, "**3;../**3")
     if empty(f)
         echo "File" class "not found "
         let &suffixesadd = origsua
