@@ -5,7 +5,7 @@ endif
 let class_open_plugin = 1
 
 function! ClassComplete(ArgLead, CmdLine, CursorPos)
-    let f = system("find . -regextype posix-extended -regex '.*" . a:ArgLead . ".*((.cpp)|(.cc)|(.c)|(.cxx)|(.h)|(.hpp)|(.hh)|(.hxx))'")
+    let f = system("find .. -maxdepth 4 -regextype posix-extended -regex '.*" . a:ArgLead . ".*((.cpp)|(.cc)|(.c)|(.cxx)|(.h)|(.hpp)|(.hh)|(.hxx))'")
     let files = split(f, "\n")
     echom join(files, ",")
     " Get the files without paths or extensions
