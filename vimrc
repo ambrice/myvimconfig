@@ -26,6 +26,7 @@ set shiftround
 set switchbuf=usetab
 set laststatus=2
 set encoding=utf-8
+set display=uhex
 
 runtime vimrc.local
 
@@ -85,3 +86,14 @@ let g:slimv_impl='mit'
 let g:scheme_builtin_swank=1
 
 let g:gitgutter_enabled=0
+
+let g:clang_complete_copen=1
+let g:clang_snippets=1
+let g:clang_close_preview=1
+let g:clang_library_path="/usr/lib/llvm-3.8/lib"
+let g:clang_jumpto_declaration_key="<leader>n"
+let g:clang_jumpto_back_key="<leader>p"
+"let g:clang_use_library=0
+
+let g:jedi#popup_on_dot = 0
+let g:jedi#show_call_signatures = "0"
