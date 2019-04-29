@@ -16,9 +16,6 @@
 [submodule "bundle/Zenburn"]
 	path = bundle/Zenburn
 	url = git://github.com/jnurmine/Zenburn.git
-[submodule "bundle/vim-golang"]
-	path = bundle/vim-golang
-	url = git://github.com/jnwhiteh/vim-golang.git
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
@@ -31,3 +28,9 @@
 [submodule "bundle/clang-complete"]
 	path = bundle/clang-complete
 	url = https://github.com/myint/clang-complete.git
+[submodule "bundle/vim-javascript"]
+	path = bundle/vim-javascript
+	url = https://github.com/pangloss/vim-javascript
+[submodule "bundle/vim-jsx"]
+	path = bundle/vim-jsx
+	url = https://github.com/mxw/vim-jsx
