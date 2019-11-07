@@ -80,6 +80,8 @@ nnoremap <leader>o :ClassOpen<CR>
 
 let g:syntastic_cpp_compiler_options = ' -std=c++11'
 let g:syntastic_mode_map = { 'passive_filetypes': ['cpp', 'java'] }
+let g:syntastic_python_checkers = ['python']
+let g:syntastic_python_python_exec = 'python3'
 
 let g:slimv_lisp='/usr/bin/mit-scheme'
 let g:slimv_impl='mit'
@@ -90,7 +92,7 @@ let g:gitgutter_enabled=0
 let g:clang_complete_copen=1
 let g:clang_snippets=1
 let g:clang_close_preview=1
-let g:clang_library_path="/usr/lib/llvm-3.8/lib"
+let g:clang_library_path="/usr/lib/llvm-8/lib"
 let g:clang_jumpto_declaration_key="<leader>n"
 let g:clang_jumpto_back_key="<leader>p"
 "let g:clang_use_library=0
