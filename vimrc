@@ -1,3 +1,23 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'jnurmine/Zenburn'
+
+Plugin 'ycm-core/YouCompleteMe'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype on
+filetype plugin on    " required
+filetype indent on
+
 syntax on
 set nocompatible
 set ruler
@@ -30,12 +50,7 @@ set display=uhex
 
 runtime vimrc.local
 
-call pathogen#infect()
-
 let mapleader=","
-let g:rails_leader="\\"
-
-let g:EclimXmlValidate=0
 
 filetype on
 filetype plugin on
@@ -54,40 +69,9 @@ noremap <S-SPACE> :bprev!<CR>
 
 colorscheme zenburn
 
-" Project plugin stuff
-au BufWinLeave .vimprojects mkview
-au BufWinEnter .vimprojects silent loadview
-
-let g:proj_flags="imstgST"
-
-" Fuzzyfinder stuff
-nnoremap <leader>f :FuzzyFinderFile <C-r>=expand('%:~:.')[:-1-len(expand('%:~:.:t'))]<CR><CR>
-
-" Supertab stuff
-let g:SuperTabDefaultCompletionType = "context"
-let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
-
-nnoremap <silent> <leader>i :JavaImport<cr>
-nnoremap <silent> <leader>d :JavaDocSearch -x declarations<cr>
-nnoremap <silent> <leader>s :JavaSearchContext<cr>
-nnoremap <silent> <leader>c :JavaCorrect<cr>
-
 augroup filetype
   au! BufRead,BufNewFile *.proto setfiletype proto
 augroup end
 
 nnoremap <leader>o :ClassOpen<CR>
 
-let g:syntastic_cpp_compiler_options = ' -std=c++11'
-let g:syntastic_mode_map = { 'passive_filetypes': ['cpp', 'java'] }
-let g:syntastic_python_checkers = ['python']
-let g:syntastic_python_python_exec = 'python3'
-
-let g:slimv_lisp='/usr/bin/mit-scheme'
-let g:slimv_impl='mit'
-let g:scheme_builtin_swank=1
-
-let g:gitgutter_enabled=0
-
-let g:jedi#popup_on_dot = 0
-let g:jedi#show_call_signatures = "0"
