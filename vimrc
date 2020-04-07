@@ -12,6 +12,10 @@ Plugin 'jnurmine/Zenburn'
 
 Plugin 'ycm-core/YouCompleteMe'
 
+Plugin 'fatih/vim-go'
+
+Plugin 'udalov/kotlin-vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype on
@@ -52,10 +56,6 @@ runtime vimrc.local
 
 let mapleader=","
 
-filetype on
-filetype plugin on
-filetype indent on
-
 runtime macros/matchit.vim
 
 " Mappings for easier window navigation
@@ -75,3 +75,4 @@ augroup end
 
 nnoremap <leader>o :ClassOpen<CR>
 
+autocmd FileType javascript setlocal ts=2 sw=2
