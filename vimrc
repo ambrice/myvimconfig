@@ -1,26 +1,18 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+function! BuildYCM(info)
+    if a:info.status == 'installed' || a:info.force
+        !./install.sh
+    endif
+endfunction
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-Plugin 'jnurmine/Zenburn'
-
-Plugin 'ycm-core/YouCompleteMe'
-
-Plugin 'fatih/vim-go'
-
-Plugin 'udalov/kotlin-vim'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype on
-filetype plugin on    " required
-filetype indent on
+call plug#begin('~/.vim/plugged')
+Plug 'jnurmine/Zenburn'
+Plug 'ycm-core/YouCompleteMe', { 'do': function('BuildYCM') }
+Plug 'fatih/vim-go'
+Plug 'udalov/kotlin-vim'
+Plug 'vim-crystal/vim-crystal'
+Plug 'tpope/vim-fugitive'
+Plug 'kergoth/vim-bitbake'
+call plug#end()
 
 syntax on
 set nocompatible
@@ -76,3 +68,8 @@ augroup end
 nnoremap <leader>o :ClassOpen<CR>
 
 autocmd FileType javascript setlocal ts=2 sw=2
+
+autocmd FileType crystal setlocal ts=2 sw=2
+
+autocmd FileType dts setlocal noexpandtab
+
